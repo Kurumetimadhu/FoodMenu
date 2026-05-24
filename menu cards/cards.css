@@ -1,0 +1,151 @@
+:root {
+  --background-color: #050505;
+  --card-bg: #111;
+  --card-radius: 20px;
+  --text-color: #ffffff;
+  --accent-color: #ff9a00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.card-background {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.head-color,
+.head-color1 {
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.1rem;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  border-radius: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.fast_food {
+  width: 100%;;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto 1.1rem;
+  max-height: 220px;
+}
+.back_btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ffb84c, var(--accent-color));
+  color: #111;
+  padding: 0.55rem 1rem;
+  min-width: 110px;
+  height: 44px;
+  border-radius: 10px;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  border: none;
+}
+.back_btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.28);
+}
+.back_btn:active{
+  transform: translateY(-1px) scale(0.995);
+  opacity: 0.95;
+}
+
+/* Retro stamped price badge */
+.price {
+  color: var(--accent-color);
+}
+.card-background ol {
+  list-style: decimal inside;
+  padding-left: 0;
+  margin: 0;
+}
+
+.items,
+.items1,
+.items_birayani {
+  color: var(--text-color);
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
+  font-family: Roboto, sans-serif;
+  line-height: 1.8;
+}
+
+.price {
+  color: var(--accent-color);
+}
+
+@media (max-width: 1199px) {
+  .card-background {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-background {
+    padding: 1rem;
+  }
+
+  .head-color,
+  .head-color1 {
+    font-size: 1rem;
+  }
+
+  .items,
+  .items1,
+  .items_birayani {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-background {
+    min-height: 100%;
+  }
+}
+
+/* Back button for menu page */
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--accent-color);
+  color: #111;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 767px) {
+  .back-btn {
+    width: 90%;
+    display: block;
+    margin: 0.5rem auto;
+    text-align: center;
+  }
+}
